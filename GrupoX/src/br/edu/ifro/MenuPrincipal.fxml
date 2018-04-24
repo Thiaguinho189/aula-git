@@ -7,15 +7,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="249.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="333.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuPrincipalController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <TextField fx:id="txtNumero1" layoutX="33.0" layoutY="47.0" />
-      <TextField fx:id="txtNumero2" layoutX="33.0" layoutY="109.0" />
-      <TextField fx:id="txtResultado" layoutX="33.0" layoutY="167.0" />
-      <Label layoutX="33.0" layoutY="26.0" text="Numero1" />
-      <Label layoutX="33.0" layoutY="88.0" text="Numero2" />
-      <Label layoutX="33.0" layoutY="146.0" text="Resultado" />
-      <Button fx:id="btnSoma" layoutX="266.0" layoutY="47.0" mnemonicParsing="false" onAction="#soma" text="Soma" />
+      <TextField fx:id="txtNumero1" layoutX="87.0" layoutY="115.0" />
+      <TextField fx:id="txtNumero2" layoutX="87.0" layoutY="177.0" />
+      <TextField fx:id="txtResultado" layoutX="87.0" layoutY="235.0" />
+      <Label layoutX="87.0" layoutY="94.0" text="Numero1" />
+      <Label layoutX="87.0" layoutY="156.0" text="Numero2" />
+      <Label layoutX="87.0" layoutY="214.0" text="Resultado" />
+      <Button fx:id="btnSoma" layoutX="320.0" layoutY="115.0" mnemonicParsing="false" onAction="#soma" text="Soma" />
+      <MenuBar layoutX="7.0" layoutY="7.0" prefHeight="32.0" prefWidth="551.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirCadastroAluno" text="Alunos" />
+                  <MenuItem mnemonicParsing="false" onAction="#fecharProjeto" text="Fechar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
     </children>
 </AnchorPane>
