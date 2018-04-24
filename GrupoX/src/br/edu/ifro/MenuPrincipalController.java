@@ -52,7 +52,7 @@ public class MenuPrincipalController implements Initializable {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("Aluno.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(),900,682);
+            Scene scene = new Scene(fxmlLoader.load(),400,400);
             Stage stage = new Stage();
             stage.setTitle("Cadastrar aluno");
             stage.setScene(scene);
