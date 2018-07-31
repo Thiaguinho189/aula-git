@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.ifro;
+package br.edu.ifro.control;
 
-import br.edu.ifro.modelo.Aluno;
+import br.edu.ifro.model.Aluno;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;

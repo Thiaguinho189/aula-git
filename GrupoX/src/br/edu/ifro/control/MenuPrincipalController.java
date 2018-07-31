@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.ifro;
+package br.edu.ifro.control;
 
 import java.io.IOException;
 import java.net.URL;
@@ -51,7 +51,7 @@ public class MenuPrincipalController implements Initializable {
     private void abrirCadastroAluno(ActionEvent event) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("Aluno.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/Aluno.fxml"));
             Scene scene = new Scene(fxmlLoader.load(),400,400);
             Stage stage = new Stage();
             stage.setTitle("Cadastrar aluno");
