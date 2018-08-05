@@ -6,6 +6,7 @@
 package br.edu.ifro.control;
 
 import br.edu.ifro.model.Aluno;
+import br.eti.diegofonseca.MaskFieldUtil;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -26,13 +27,16 @@ public class AlunoController implements Initializable {
 
     @FXML
     private TextField txtNome;
+    
+    @FXML
+    private TextField txtTelefone;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        MaskFieldUtil.foneField(txtTelefone);        
     }    
 
     @FXML
@@ -42,6 +46,10 @@ public class AlunoController implements Initializable {
         
         Aluno aluno1 = new Aluno();
         aluno1.setNome(txtNome.getText());
+        // com mascara
+        aluno1.setTelefone(txtTelefone.getText());
+        // sem mascara
+        //aluno1.setTelefone(MaskFieldUtil.onlyAlfaNumericValue(txtTelefone));
         
         em.getTransaction().begin();
         
