@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.cell.*?>
+<AnchorPane id="AnchorPane" prefHeight="245.0" prefWidth="413.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ifro.control.ListagemAlunoController">
+   <children>
+      <TableView fx:id="tbAlunos" layoutX="25.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn text="ID">
+              <cellValueFactory>
+                  <PropertyValueFactory property="id" /> 
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn text="NOME">
+              <cellValueFactory>
+                  <PropertyValueFactory property="nome" /> 
+              </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cbAlunos" layoutX="238.0" layoutY="29.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

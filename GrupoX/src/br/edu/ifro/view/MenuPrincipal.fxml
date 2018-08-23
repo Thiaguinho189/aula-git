@@ -22,6 +22,7 @@
           <Menu mnemonicParsing="false" text="Cadastros">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#abrirCadastroAluno" text="Alunos" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirListagemAluno" text="Listagem de alunos" />
                   <MenuItem mnemonicParsing="false" onAction="#fecharProjeto" text="Fechar" />
             </items>
           </Menu>

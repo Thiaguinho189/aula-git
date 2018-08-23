@@ -48,24 +48,30 @@ public class MenuPrincipalController implements Initializable {
     }    
 
     @FXML
-    private void abrirCadastroAluno(ActionEvent event) {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/Aluno.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(),400,400);
-            Stage stage = new Stage();
-            stage.setTitle("Cadastrar aluno");
-            stage.setScene(scene);
-            stage.show();
-        }
-        catch(IOException e){
-
-        }
+    private void abrirCadastroAluno(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/Aluno.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),400,400);
+        Stage stage = new Stage();
+        stage.setTitle("Cadastrar aluno");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
     private void fecharProjeto(ActionEvent event) {
         
+    }
+
+    @FXML
+    private void abrirListagemAluno(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/ListagemAluno.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),400,400);
+        Stage stage = new Stage();
+        stage.setTitle("Cadastrar aluno");
+        stage.setScene(scene);
+        stage.show();
     }
     
 }

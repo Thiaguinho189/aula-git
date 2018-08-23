@@ -13,6 +13,10 @@ public class Aluno {
     private Integer id;
     private String nome;    
     private String telefone;
+        
+    public String toString() {
+        return id + " - " + nome;
+    }
 
     public Integer getId() {
         return id;
