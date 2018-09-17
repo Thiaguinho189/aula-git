@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="333.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.MenuPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="444.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.MenuPrincipalController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <TextField fx:id="txtNumero1" layoutX="87.0" layoutY="115.0" />
-      <TextField fx:id="txtNumero2" layoutX="87.0" layoutY="177.0" />
-      <TextField fx:id="txtResultado" layoutX="87.0" layoutY="235.0" />
-      <Label layoutX="87.0" layoutY="94.0" text="Numero1" />
-      <Label layoutX="87.0" layoutY="156.0" text="Numero2" />
-      <Label layoutX="87.0" layoutY="214.0" text="Resultado" />
-      <Button fx:id="btnSoma" layoutX="320.0" layoutY="115.0" mnemonicParsing="false" onAction="#soma" text="Soma" />
-      <MenuBar layoutX="7.0" layoutY="7.0" prefHeight="32.0" prefWidth="551.0">
+      <MenuBar layoutX="7.0" layoutY="7.0" prefHeight="32.0" prefWidth="763.0">
         <menus>
           <Menu mnemonicParsing="false" text="Cadastros">
             <items>

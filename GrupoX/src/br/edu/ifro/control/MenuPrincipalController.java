@@ -13,9 +13,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -24,23 +21,6 @@ import javafx.stage.Stage;
  */
 public class MenuPrincipalController implements Initializable {
     
-    @FXML
-    private TextField txtNumero1, txtNumero2, txtResultado;
-    
-    @FXML
-    private Button btnSoma;
-    
-    @FXML
-    private Label label;
-    
-    @FXML
-    private void soma(ActionEvent event) {
-        Double num1 = Double.parseDouble(txtNumero1.getText());
-        Double num2 = Double.parseDouble(txtNumero2.getText());
-        Double resultado = num1 + num2;
-        
-        txtResultado.setText(resultado.toString());
-    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -51,7 +31,7 @@ public class MenuPrincipalController implements Initializable {
     private void abrirCadastroAluno(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/Aluno.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),400,400);
+        Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Cadastrar aluno");
         stage.setScene(scene);
@@ -67,7 +47,7 @@ public class MenuPrincipalController implements Initializable {
     private void abrirListagemAluno(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/ListagemAluno.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),400,400);
+        Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Cadastrar aluno");
         stage.setScene(scene);
