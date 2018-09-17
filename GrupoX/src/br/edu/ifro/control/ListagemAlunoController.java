@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -24,6 +25,32 @@ public class ListagemAlunoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        listar();
+    }    
+
+    @FXML
+    private void editar(ActionEvent event) {
+    }
+
+    @FXML
+    private void excluir(ActionEvent event) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("aula");
+        EntityManager em = emf.createEntityManager();
+        
+        Aluno aluno = (Aluno) tbAlunos.getSelectionModel().getSelectedItem();
+        
+        Query query = em.createQuery("SELECT a FROM Aluno as a WHERE a.id = :id");
+        query.setParameter("id", aluno.getId());
+               
+        Aluno a = (Aluno) query.getSingleResult();
+        
+        em.getTransaction().begin();
+        em.remove(a);
+        em.getTransaction().commit();
+        listar();
+    }
+    
+    private void listar() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("aula");
         EntityManager em = emf.createEntityManager();
                 
@@ -37,6 +64,6 @@ public class ListagemAlunoController implements Initializable {
         ObservableList oAlunos = FXCollections.observableArrayList(alunos);                                 
         cbAlunos.setItems(oAlunos);
         tbAlunos.setItems(oAlunos);
-    }    
+    }
     
 }
