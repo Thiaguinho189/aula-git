@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 /**
  * FXML Controller class
@@ -30,6 +31,14 @@ public class AlunoController implements Initializable {
     
     @FXML
     private TextField txtTelefone;
+    
+    private Aluno aluno;
+    
+    public void editarAluno(Aluno aluno) {
+        this.aluno = aluno;
+        txtNome.setText(aluno.getNome());
+        txtTelefone.setText(aluno.getTelefone());
+    }
 
     /**
      * Initializes the controller class.
@@ -44,7 +53,17 @@ public class AlunoController implements Initializable {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("aula");
         EntityManager em = emf.createEntityManager();
         
-        Aluno aluno1 = new Aluno();
+        Aluno aluno1;
+        if (aluno != null) {            
+            Query query = em.createQuery("SELECT a FROM Aluno as a WHERE a.id = :id");
+            query.setParameter("id", aluno.getId());
+
+            aluno1 = (Aluno) query.getSingleResult();
+        } 
+        else {
+            aluno1 = new Aluno();
+        }     
+        
         aluno1.setNome(txtNome.getText());
         // com mascara
         aluno1.setTelefone(txtTelefone.getText());

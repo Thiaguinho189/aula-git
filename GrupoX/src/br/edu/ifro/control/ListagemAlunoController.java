@@ -1,6 +1,7 @@
 package br.edu.ifro.control;
 
 import br.edu.ifro.model.Aluno;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -8,9 +9,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -29,7 +33,18 @@ public class ListagemAlunoController implements Initializable {
     }    
 
     @FXML
-    private void editar(ActionEvent event) {
+    private void editar(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/Aluno.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        
+        AlunoController c = fxmlLoader.getController();
+        c.editarAluno((Aluno) tbAlunos.getSelectionModel().getSelectedItem());
+        
+        stage.setTitle("Cadastrar aluno");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
