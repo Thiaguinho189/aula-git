@@ -53,5 +53,16 @@ public class MenuPrincipalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    private void criarPedido(ActionEvent event)  throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/Pedido.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Criar pedido");
+        stage.setScene(scene);
+        stage.show();
+    }
     
 }
