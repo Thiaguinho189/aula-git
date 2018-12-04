@@ -39,7 +39,7 @@ public class ListagemAlunoController implements Initializable {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         
-        AlunoController c = fxmlLoader.getController();
+        CadastroAlunoController c = fxmlLoader.getController();
         c.editarAluno((Aluno) tbAlunos.getSelectionModel().getSelectedItem());
         
         stage.setTitle("Cadastrar aluno");

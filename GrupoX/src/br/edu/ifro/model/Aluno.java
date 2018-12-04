@@ -13,17 +13,17 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;    
-    private String telefone;
+    
     
     @ManyToOne
-    private Cidade cidade;
+    private Turma turma;
 
-    public Cidade getCidade() {
-        return cidade;
+    public Turma getTurma() {
+        return turma;
     }
 
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
+    public void setTurma(Turma turma) {
+        this.turma = turma;
     }
         
     public String toString() {
@@ -46,11 +46,4 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
 }

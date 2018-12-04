@@ -22,29 +22,26 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
  *
  * @author erica
  */
-public class AlunoController implements Initializable {
+public class CadastroAlunoController implements Initializable {
 
     @FXML
     private TextField txtNome;
     
-    @FXML
-    private TextField txtTelefone;
     
     private Aluno aluno;
     
-    @FXML
-    private ComboBox<Cidade> cbCidade;
     
     public void editarAluno(Aluno aluno) {
         this.aluno = aluno;
         txtNome.setText(aluno.getNome());
-        txtTelefone.setText(aluno.getTelefone());
+        
     }
 
     /**
@@ -52,15 +49,7 @@ public class AlunoController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        MaskFieldUtil.foneField(txtTelefone);    
         
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("aula");
-        EntityManager em = emf.createEntityManager();
-        
-        Query query = em.createQuery("SELECT c FROM Cidade c ");
-        List cidades = query.getResultList();
-        
-        cbCidade.setItems(FXCollections.observableArrayList(cidades));
         
     }    
 
@@ -81,11 +70,6 @@ public class AlunoController implements Initializable {
         }     
         
         aluno1.setNome(txtNome.getText());
-        // com mascara
-        aluno1.setTelefone(txtTelefone.getText());
-        
-        aluno1.setCidade(cbCidade.getSelectionModel().getSelectedItem());
-        // sem mascara
         //aluno1.setTelefone(MaskFieldUtil.onlyAlfaNumericValue(txtTelefone));
         
         em.getTransaction().begin();
@@ -93,6 +77,8 @@ public class AlunoController implements Initializable {
         em.persist(aluno1);
         
         em.getTransaction().commit();
+        
+        JOptionPane.showMessageDialog(null,"Usuário inserido com suqcesso!");
         
     }
 
