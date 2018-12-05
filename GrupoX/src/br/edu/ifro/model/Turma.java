@@ -20,8 +20,17 @@ public class Turma {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
+    private String Turma;
     private String turno;
     private String curso;
+
+    public String getTurma() {
+        return Turma;
+    }
+
+    public void setTurma(String Turma) {
+        this.Turma = Turma;
+    }
 
     public Integer getId() {
         return id;

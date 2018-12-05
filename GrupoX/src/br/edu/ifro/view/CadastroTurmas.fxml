@@ -6,14 +6,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="262.0" prefWidth="494.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ifro.control.CadastroTurmasController">
+<AnchorPane id="AnchorPane" prefHeight="262.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.CadastroTurmasController">
    <children>
-      <Label layoutX="63.0" layoutY="87.0" text="Nome" />
+      <Label layoutX="63.0" layoutY="45.0" text="Ano" />
       <Label layoutX="64.0" layoutY="131.0" text="Curso" />
       <Label layoutX="64.0" layoutY="178.0" text="Turno" />
-      <TextField fx:id="txtNome" layoutX="63.0" layoutY="104.0" />
+      <TextField fx:id="txtNome" layoutX="63.0" layoutY="62.0" />
       <TextField fx:id="txtCurso" layoutX="63.0" layoutY="148.0" />
       <TextField fx:id="txtTurno" layoutX="63.0" layoutY="195.0" />
+      <TextField fx:id="txtNome1" layoutX="63.0" layoutY="104.0" />
+      <Label layoutX="63.0" layoutY="87.0" text="Turma" />
+      <Button layoutX="266.0" layoutY="64.0" mnemonicParsing="false" onAction="#SalvarTurmas" prefHeight="151.0" prefWidth="186.0" text="SALVAR" />
    </children>
 </AnchorPane>

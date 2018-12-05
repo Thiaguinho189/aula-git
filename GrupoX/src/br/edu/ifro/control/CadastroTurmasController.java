@@ -29,6 +29,8 @@ public class CadastroTurmasController implements Initializable {
     private TextField txtCurso;
     @FXML
     private TextField txtTurno;
+    @FXML
+    private TextField txtTurma;
 
     /**
      * Initializes the controller class.
@@ -44,6 +46,7 @@ public class CadastroTurmasController implements Initializable {
         turma.setNome(txtNome.getText());
         turma.setCurso(txtCurso.getText());
         turma.setTurno(txtTurno.getText());
+        turma.setTurma(txtTurma.getText());
         
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("aula");
         EntityManager em =emf.createEntityManager();

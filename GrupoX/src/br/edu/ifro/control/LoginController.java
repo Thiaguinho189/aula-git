@@ -70,6 +70,7 @@ public class LoginController implements Initializable {
                 stage.setTitle("Menu Principal");
                 stage.setScene(scene);
                 stage.show();
+                
             }
         }
     }

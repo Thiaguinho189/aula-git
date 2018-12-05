@@ -19,7 +19,7 @@
                 <MenuItem mnemonicParsing="false" onAction="#abrirCadastroAluno" text="Alunos" />
                 <MenuItem mnemonicParsing="false" onAction="#abrirCadastroProfessor" text="Professor" />
                 <MenuItem mnemonicParsing="false" onAction="#abrirCadastroMateria" text="Materia" />
-                  <MenuItem mnemonicParsing="false" onAction="#abrirCadastroAluno" text="Turmas" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirCadastroTurmas" text="Turmas" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Pesquisar">

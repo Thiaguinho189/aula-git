@@ -93,6 +93,17 @@ public class MenuPrincipalController implements Initializable {
         stage.show();
     }
 
+    @FXML
+    private void abrirCadastroTurmas(ActionEvent event) throws IOException {
+    FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/CadastroTurmas.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Cadastro de turmas");
+        stage.setScene(scene);
+        stage.show();
+    }
+
   
     
 }
