@@ -6,15 +6,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="215.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.CadastroAlunoController">
+<AnchorPane id="AnchorPane" prefHeight="281.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.CadastroAlunoController">
    <children>
       <TextField fx:id="txtNome" layoutX="43.0" layoutY="73.0" />
       <Label layoutX="43.0" layoutY="50.0" text="Nome" />
-      <Button layoutX="252.0" layoutY="180.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
-      <Button layoutX="312.0" layoutY="180.0" mnemonicParsing="false" onAction="#fechar" text="Fechar" />
-      <Label layoutX="210.0" layoutY="50.0" text="Telefone" />
-      <TextField fx:id="txtTelefone" layoutX="210.0" layoutY="73.0" />
-      <Label layoutX="43.0" layoutY="114.0" text="Cidade" />
-      <ComboBox fx:id="cbCidade" layoutX="43.0" layoutY="139.0" prefHeight="25.0" prefWidth="318.0" />
+      <Button layoutX="248.0" layoutY="211.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+      <Button layoutX="365.0" layoutY="211.0" mnemonicParsing="false" onAction="#fechar" text="Fechar" />
+      <Label layoutX="280.0" layoutY="50.0" text="Telefone" />
+      <TextField fx:id="txtTelefone" layoutX="278.0" layoutY="73.0" />
+      <Label layoutX="43.0" layoutY="114.0" text="Turma" />
+      <ComboBox fx:id="cbTurma" layoutX="43.0" layoutY="139.0" prefHeight="25.0" prefWidth="318.0" />
    </children>
 </AnchorPane>

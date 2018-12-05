@@ -15,6 +15,7 @@ import javafx.scene.control.TextField;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -39,9 +40,10 @@ public class CadastroTurmasController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
     }   
-    
+   
+
     @FXML
-    private void salvar(ActionEvent event) {
+    private void SalvarTurmas(ActionEvent event) {
         Turma turma = new Turma();
         turma.setNome(txtNome.getText());
         turma.setCurso(txtCurso.getText());
@@ -54,6 +56,7 @@ public class CadastroTurmasController implements Initializable {
         em.getTransaction().begin();
         em.persist(turma);
         em.getTransaction().commit();
+        JOptionPane.showMessageDialog(null,"Turma inserida com suqcesso.");
     }
     
 }

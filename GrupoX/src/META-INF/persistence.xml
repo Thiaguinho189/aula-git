@@ -5,6 +5,15 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <!-- Aqui são listadas todas as entidades -->
     <class>br.edu.ifro.model.Aluno</class>
+    <class>br.edu.ifro.model.Login</class>
+    <class>br.edu.ifro.model.Funcionario</class>
+    <class>br.edu.ifro.model.Pedido</class>
+    <class>br.edu.ifro.model.Produto</class>
+    <class>br.edu.ifro.model.Turma</class>
+    <class>br.edu.ifro.model.</class>
+    <class>br.edu.ifro.model.</class>
+    <class>br.edu.ifro.model.</class>
+    <class>br.edu.ifro.model.</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <!-- Banco de dados host/database -->

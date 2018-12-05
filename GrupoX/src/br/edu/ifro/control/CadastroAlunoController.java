@@ -36,11 +36,16 @@ public class CadastroAlunoController implements Initializable {
     
     
     private Aluno aluno;
+    @FXML
+    private TextField txtTelefone;
+    @FXML
+    private ComboBox<?> cbTurma;
     
     
     public void editarAluno(Aluno aluno) {
         this.aluno = aluno;
         txtNome.setText(aluno.getNome());
+        txtTelefone.setText(aluno.getTelefone());
         
     }
 
@@ -49,7 +54,15 @@ public class CadastroAlunoController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+          MaskFieldUtil.foneField(txtTelefone);
+          
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("aula");
+        EntityManager em = emf.createEntityManager();
         
+        Query query = em.createQuery("SELECT c FROM Turma c ");
+        List turmas = query.getResultList();
+        
+        cbTurma.setItems(FXCollections.observableArrayList(turmas));
         
     }    
 
@@ -70,6 +83,9 @@ public class CadastroAlunoController implements Initializable {
         }     
         
         aluno1.setNome(txtNome.getText());
+        aluno1.setTelefone(txtTelefone.getText());
+       
+        
         //aluno1.setTelefone(MaskFieldUtil.onlyAlfaNumericValue(txtTelefone));
         
         em.getTransaction().begin();
