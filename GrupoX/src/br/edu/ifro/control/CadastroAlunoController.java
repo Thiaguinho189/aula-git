@@ -6,7 +6,6 @@
 package br.edu.ifro.control;
 
 import br.edu.ifro.model.Aluno;
-import br.edu.ifro.model.Cidade;
 import br.eti.diegofonseca.MaskFieldUtil;
 import java.net.URL;
 import java.util.List;
@@ -86,7 +85,7 @@ public class CadastroAlunoController implements Initializable {
         aluno1.setTelefone(txtTelefone.getText());
        
         
-        //aluno1.setTelefone(MaskFieldUtil.onlyAlfaNumericValue(txtTelefone));
+        aluno1.setTelefone(MaskFieldUtil.onlyAlfaNumericValue(txtTelefone));
         
         em.getTransaction().begin();
         

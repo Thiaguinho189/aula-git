@@ -5,16 +5,17 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="262.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.CadastroTurmasController">
+<AnchorPane id="AnchorPane" prefHeight="262.0" prefWidth="494.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.CadastroTurmasController">
    <children>
-      <Label layoutX="63.0" layoutY="45.0" text="Ano" />
-      <Label layoutX="64.0" layoutY="131.0" text="Curso" />
+      <Label layoutX="63.0" layoutY="28.0" text="Ano" />
+      <Label layoutX="64.0" layoutY="128.0" text="Curso" />
       <Label layoutX="64.0" layoutY="178.0" text="Turno" />
-      <TextField fx:id="txtNome" layoutX="63.0" layoutY="62.0" />
-      <TextField fx:id="txtCurso" layoutX="63.0" layoutY="148.0" />
-      <TextField fx:id="txtTurno" layoutX="63.0" layoutY="195.0" />
-      <TextField fx:id="txtTurma" layoutX="63.0" layoutY="104.0" />
-      <Label layoutX="63.0" layoutY="87.0" text="Turma" />
-      <Button layoutX="266.0" layoutY="64.0" mnemonicParsing="false" onAction="#SalvarTurmas" prefHeight="151.0" prefWidth="186.0" text="SALVAR" />
+      <TextField fx:id="txtNome" layoutX="63.0" layoutY="45.0" style="-fx-background-color: #F2F2F4; -fx-border-color: black;" />
+      <TextField fx:id="txtTurma" layoutX="63.0" layoutY="95.0" style="-fx-background-color: #F2F2F4; -fx-border-color: black;" />
+      <TextField fx:id="txtCurso" layoutX="63.0" layoutY="145.0" style="-fx-background-color: #F2F2F4; -fx-border-color: black;" />
+      <TextField fx:id="txtTurno" layoutX="63.0" layoutY="195.0" style="-fx-background-color: #F2F2F4; -fx-border-color: black;" />
+      <Label layoutX="63.0" layoutY="78.0" text="Turma" />
+      <Button layoutX="310.0" layoutY="49.0" mnemonicParsing="false" onAction="#SalvarTurmas" prefHeight="48.0" prefWidth="103.0" text="SALVAR" />
+      <Button layoutX="310.0" layoutY="138.0" mnemonicParsing="false" onAction="#Fechar" prefHeight="48.0" prefWidth="103.0" text="FECHAR" />
    </children>
 </AnchorPane>

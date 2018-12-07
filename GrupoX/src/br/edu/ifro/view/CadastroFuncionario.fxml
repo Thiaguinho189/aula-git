@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="204.0" prefWidth="421.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ifro.control.CadastroFuncionarioController">
+<AnchorPane id="AnchorPane" prefHeight="204.0" prefWidth="421.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ifro.control.CadastroFuncionarioController">
    <children>
-      <TextField fx:id="txtNome" layoutX="38.0" layoutY="47.0" prefHeight="25.0" prefWidth="314.0" />
-      <TextField fx:id="txtUsuario" layoutX="38.0" layoutY="108.0" />
-      <TextField fx:id="txtSenha" layoutX="201.0" layoutY="108.0" />
+      <TextField fx:id="txtNome" layoutX="38.0" layoutY="47.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #F2F2F4; -fx-border-color: black;" />
+      <TextField fx:id="txtUsuario" layoutX="38.0" layoutY="108.0" style="-fx-background-color: #F2F2F4; -fx-border-color: black;" />
+      <TextField fx:id="txtSenha" layoutX="201.0" layoutY="108.0" style="-fx-background-color: #F2F2F4; -fx-border-color: black;" />
       <Label layoutX="38.0" layoutY="30.0" text="Nome" />
       <Label layoutX="38.0" layoutY="91.0" text="Usuário" />
       <Label layoutX="201.0" layoutY="91.0" text="Senha" />

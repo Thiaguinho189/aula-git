@@ -30,9 +30,8 @@ public class CadastroTurmasController implements Initializable {
     private TextField txtCurso;
     @FXML
     private TextField txtTurno;
-    private TextField txtTurma;
     @FXML
-    private TextField txtNome1;
+    private TextField txtTurma;
 
     /**
      * Initializes the controller class.
@@ -58,6 +57,10 @@ public class CadastroTurmasController implements Initializable {
         em.persist(turma);
         em.getTransaction().commit();
         JOptionPane.showMessageDialog(null,"Turma inserida com suqcesso.");
+    }
+
+    @FXML
+    private void Fechar(ActionEvent event) {
     }
     
 }
