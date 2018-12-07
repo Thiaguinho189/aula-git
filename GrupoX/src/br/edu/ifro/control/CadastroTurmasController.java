@@ -30,8 +30,9 @@ public class CadastroTurmasController implements Initializable {
     private TextField txtCurso;
     @FXML
     private TextField txtTurno;
-    @FXML
     private TextField txtTurma;
+    @FXML
+    private TextField txtNome1;
 
     /**
      * Initializes the controller class.
